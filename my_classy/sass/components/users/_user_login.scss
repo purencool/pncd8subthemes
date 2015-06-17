@@ -1,0 +1,182 @@
+.page-user {
+	footer[role="contentinfo"] > div:first-child,
+	.hi-light,
+	.header-region,
+	.sidebar-first,
+	.header-border,
+	.sidebar-second,
+	.navigation {
+		display:none;
+	}
+	
+	header {
+		position: inherit; 
+		top:  inherit;
+		left:  inherit; 
+		right:inherit; 
+		padding-top:inherit; 
+		height: inherit; 
+		z-index: inherit; 
+		background-color: inherit; 
+		opacity: inherit; 
+		filter: inherit; 
+		zoom: 1;
+	}
+
+	
+	.siteinfo {
+		padding-left:28px;
+         
+		hgroup {
+			display:none;
+		}
+	
+		figure {
+			a {
+				display:block;
+				width:100px;
+				height:20px;
+				img {display:none;}
+			}
+			a:before {
+				content:  "Home";
+				font-size:14px;
+			}
+		}
+	}
+	.page {
+		> div >  h1 {
+			width:230px;
+			height:65px;
+			padding:0;
+			margin:0 auto;
+			text-indent:-9999px;
+			background: url('../images/mobile/mobile-logo.jpg') repeat-x;
+		}
+	}
+
+
+	
+        #main-content > div {
+		width:inherit;
+		
+	}
+
+	label, small {display:none;}
+	//-- override
+	.tabs li {
+		padding:0;
+	}
+
+	ul.primary {
+		padding-top:5px;
+	}
+
+	ul.primary li {
+		display:inherit;
+		width:100%;
+		padding-bottom:3px;
+		a {
+			display:block;
+			width:100%;
+			padding:10px 0 10px 0;
+			@include link-colors(
+			$tabsMPrimaryNormal,
+			$tabsMPrimaryHover,
+			$tabsMPrimaryActive,
+			$tabsMPrimaryVisited ,
+			$tabsMPrimaryFocus
+			);
+			background-color:$tabsMPrimaryBackGround;
+			font-size:$mobileSLinkHeight;
+			text-align:center;
+		}
+	}
+	ul.primary li a.active {
+		font-weight:normal;
+		color:$aMActive;
+	}
+
+
+	@include breakpoint($largeSmartPhone) {
+
+		.page  > div >  h1 {
+			width: 314px;
+			height: 89px;
+			background: url("../images/mobile/mobile-logo.jpg") no-repeat;
+			background-size: cover;
+		}
+  
+
+		#main-content {
+	
+			@include largestBorder;
+			padding-top:65px;
+
+
+			form div:first-child:before {
+				float:left;
+				padding-bottom:25px;
+				width:460px;
+				font-size: 29px;
+				color: $aNormal;
+			}
+
+
+			#user-login div:first-child:before {
+				content: "Sign in";
+			}
+
+			#user-register-form #edit-account div:first-child:before {
+				content: "Create account";
+			}
+
+			#user-pass div:first-child:before {
+				content: "New password";
+			}
+
+		}
+
+		ul.primary {
+			width:460px;
+			margin:0 auto;
+		}
+
+		ul.primary li {
+			float:left;
+			width:auto;
+			padding-bottom:45px;
+			padding-right: 18px;
+			a {
+				background-color:$bodyBackground;
+				@include link-colors(
+				$tabsPrimaryNormal,
+				$tabsPrimaryHover,
+				$tabsPrimaryActive,
+				$tabsPrimaryVisited,
+				$tabsPrimaryFocus
+				);
+
+			}
+			a.active {
+				color:$tabsPrimaryActive;
+				font-weight:600;
+			}
+		}
+		ul.primary li:last-child {
+			padding-right: 0px;
+		}
+	}
+}
+
+.admin-menu.page-user ul.primary li a {
+	font-size:$baseFontSize;
+}
+
+.admin-menu.page-user footer[role="contentinfo"] > div:first-child {
+	display:block;
+}
+
+.admin-menu.page-user footer[role="contentinfo"] h2.title{
+	display:none;
+}

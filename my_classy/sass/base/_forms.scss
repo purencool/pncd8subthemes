@@ -1,0 +1,112 @@
+//-- Form defaults
+select,
+input[type="submit"],
+input[type="text"],
+input[type="password"],
+textarea {
+	display:block;
+	@include border-radius(5px);
+}
+
+select {
+	padding-left:5px;
+	height:28px;
+	border:1px solid $borderOne;
+}
+input[type="text"],
+input[type="password"] {
+	padding-left:5px;
+	height:30px;
+	border:1px solid $borderOne;
+}
+
+input[type="submit"] {
+	border:0px;
+	padding:7px;
+	color:$colorMInput;
+	background-color:$backgroundMInput;
+}
+
+.fieldset-wrapper {
+	padding:0 0 20px 0;
+}
+
+
+//-- Form page defaults
+.page form {
+	clear:both;
+	div {
+		clear:both;
+	}
+	fieldset {
+		margin: 0;
+		padding:0;
+		border: 0px;
+		legend {
+			color:$h1Normal;
+			font-size:$mediumFontSize;
+			font-weight: 700;
+		}
+	}
+
+	label {
+		display:block;
+		clear:both;
+		padding:15px 0 7px 0;
+	}
+
+
+	input[type="text"],
+	input[type="password"],
+	textarea {
+		@include grid-span(12, 1);
+		font-size:$smallFontSize;
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;    
+		box-sizing: border-box; 
+	}
+
+	input[type="submit"] {
+		clear:both;
+	}
+	small {
+		clear:both;
+		font-size:$verySmallFontSize;
+	}
+	.collapsible {margin:20px 0 30px 0;}
+
+	.container-inline {
+		clear:both;
+		padding:10px 0 10px 0;
+		select,
+		input {
+			clear:none;
+			float:left;
+			margin-right:10px;
+		}
+
+	}
+	.form-actions {
+		clear: both; 
+		padding:10px 0 10px 0;
+		input[type="submit"] {
+			float: left;
+			clear: none;   
+		}
+
+	}
+	.grippie {
+		display:none;
+	}
+}
+
+@include breakpoint($largeSmartPhone) {
+	.page form{
+		input[type="text"],
+		input[type="password"],
+		textarea{
+			@include grid-span(11, 1);
+		}
+	}
+
+}

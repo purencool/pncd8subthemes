@@ -1,0 +1,23 @@
+.page,
+header[role="banner"] {
+	padding:35px 5px 0 5px;
+}
+
+@include breakpoint($smartPhone) {}
+@include breakpoint($largeSmartPhone) {}
+@include breakpoint($tablet) {}
+@include breakpoint($smallDesktop) {
+	.layout-container {
+		width:1024px;
+		margin:0 auto;
+	}
+}
+@include breakpoint($mediumDesktop) {
+    	.layout-container {
+		width:1170px;
+		margin:0 auto;
+	}
+}
+@include breakpoint($desktop) {}
+@include breakpoint($wideDesktop) {}
+

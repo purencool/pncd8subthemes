@@ -1,0 +1,32 @@
+#block-search-form{
+	float: left;
+	width: 100%;
+	margin-bottom:20px;
+}
+
+#search-block-form {
+	div:first-child {
+		float:left;
+		width:90%;
+	}
+	div:last-child {
+		float:left;
+		width:10%;
+	}
+	input[type="text"] {
+		float: left;
+		height:35px;
+	}
+	input[type="submit"] {
+		float: right;
+		height:35px;
+		width:35px;
+		border: 0;
+		font-size: 1.5em;
+		vertical-align: top;
+		font-family: 'FontAwesome';
+	}
+        .form-actions {
+		clear:none;
+	}
+}

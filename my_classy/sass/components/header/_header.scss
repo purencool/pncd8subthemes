@@ -1,0 +1,38 @@
+.siteinfo {
+	float:left;
+	width: 60px;
+	hgroup {
+		float:left;
+		display:none;
+	}
+
+	figure {
+
+		a {
+			display: block;
+			width: 90%;
+		}
+	}
+
+	@include breakpoint($largeSmartPhone) {
+		float: left;
+		padding:10px 0;
+		.siteinfo {
+			float:left;
+			width: 60px;
+		}
+	}
+}
+
+
+@include breakpoint($largeSmartPhone) {
+	header[role="banner"] {
+		padding-top:6px;
+	}
+	.siteinfo {
+		hgroup {
+			padding-top:7px;
+		}
+	}
+
+}

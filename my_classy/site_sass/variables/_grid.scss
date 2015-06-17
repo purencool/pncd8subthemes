@@ -1,0 +1,73 @@
+/**
+ *  12 columns
+ */
+//*
+$grids: 12;
+$gutters: 1/3;
+//*/
+
+/**
+ *  14 columns
+ */
+/*
+$grids: 16;
+$gutters: 1/4;
+//*/
+
+
+/**
+ *  Break points variables width
+ */
+/** Small Smart phone width **/
+$smallPhone :300px;
+
+/** Medium smart phone width **/
+$mediumSmartPhone :480px;
+
+/** Smart phone width **/
+$smartPhone :600px;
+
+/** Large smart phone width **/
+$largeSmartPhone:768px;
+
+/** Tablet width **/
+$tablet:960px;
+
+/** Small destop screen width **/
+$smallDesktop:1020px;
+
+/** Small Desktop width **/
+$mediumDesktop:1160px;
+
+/** Desktop width **/
+$desktop:1360px;
+
+/** Mid range desktop width **/
+$midRangeDesktop:1450px;
+
+/**Large Desktop width **/
+$wideDesktop:1600px;
+
+
+
+/**
+* Breakpoint variable heights
+*/
+
+/** Medium smart phone height **/
+$smartPhoneHeight:(min-height 480px);
+
+/** Tablet height **/
+$tabletHeight :(min-height 760px);
+
+/** Small destop screen height **/
+$smallDesktopHeight:(min-height 800px);
+
+/** Small Desktop height **/
+$mediumDesktopHeight:(min-height 960px);
+
+/** Desktop height **/
+$desktopHeight:(min-height 1100px);
+
+/** Large desktop height **/
+$wideDesktopHeight:(min-height 1250px);

@@ -1,0 +1,16 @@
+.page-user div[role="main"] {
+	@include breakpoint($largeSmartPhone) {
+	  padding:10px;
+	}
+	
+}
+.page-admin div[role="main"] {
+	width:100%;
+}
+
+.page-admin  .sidebar-second,
+.page-admin .sidebar-first {
+	display:none;
+}
+
+

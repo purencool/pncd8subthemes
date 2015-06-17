@@ -1,0 +1,162 @@
+.admin-page {
+	.page h1 {
+		background-color: #e0e0e0;
+		padding:10px;
+	}
+	.fieldset-legend {
+		display:block;
+		clear:both;
+		width:99%;
+		border-bottom:1px solid #cccccc;
+		padding-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.page {
+		.admin-list,
+		.admin {
+			h3 {
+				font-size:$mediumFontSize;
+				margin:0;
+			}
+			dl {
+				margin:15px 0 12px 0;
+			}
+			dt {
+			}
+			dd {
+				margin-left:0;
+				margin-bottom:12px;
+			}
+			.right,
+			.left {
+				@include grid-span(12, 1);
+				margin:0;
+				padding:0;
+			}
+
+		}
+
+	}	
+	#form-pncsitedetails {
+		input[type="submit"] {
+			display:block;
+			clear:both;
+		}
+	}
+
+}
+.page-filter-tips,
+.page-admin-content-add,
+.page-admin-content,
+.page-admin-config,
+.page-admin-structure,
+.page-admin-editorpanel,
+.page-admin-help,
+.logged-in {
+	#main-content{
+		width:100%;
+	}
+	div {
+		[class*='sidebar'] {
+			float:left;
+			width:90%;
+		}
+	}
+}
+
+body.page-admin-content .action-links li a {
+	font-weight:700;
+	color:white !important;
+	background-color: orange;
+	padding:20px 10px 20px 10px;
+	font-size:16px;
+}
+
+.page-admin-content-add {
+
+	.page form input[type="text"]{
+			width:100%;
+	}
+	.filter-wrapper {
+		label,
+		div {
+			padding:0;
+			margin:0;
+		}
+		
+	}
+	.filter-guidelines-item {
+		ul {
+			margin-left:0px;
+			padding-left:0px;
+		}
+	}
+	
+}
+.page-admin-config {
+	h3 {
+		font-size:$smallFontSize;
+		margin:0;
+		padding-top:10px;
+		border-bottom:1px solid #cccccc;
+		margin-bottom: 10px;
+	}
+}
+
+@include breakpoint($largeSmartPhone) {
+	.page-admin-config .page form{
+		input[type="text"],
+		input[type="password"] {
+			@include grid-span(12, 1);
+		}
+	}
+
+}
+
+
+@include breakpoint($largeSmartPhone) {
+	#edit-social{
+		@include float-span(6, 1)
+	}
+	#edit-business-hours{
+		@include float-span(6, 7)
+
+	}
+	#edit-business-details{
+		@include float-span(6, 1);
+		margin-top: -25em;
+
+	}
+
+	.page-admin-editorpanel	.fieldset-legend {
+		display:block;
+		width:92%;
+	}
+
+	.page-admin-editorpanel #form-pncsitedetails {
+		input[type="submit"] {
+			display:block;
+			clear:both;
+			margin-top: 57em;
+		}
+	}
+
+	.admin-menu,
+	.page-admin-editorpanel{
+		.page {
+			.admin {
+				.right {
+					@include grid-span(6, 7);
+				}
+				.left {
+					@include grid-span(6, 1);
+				}
+
+			}
+
+		}
+
+	} 
+}	
+

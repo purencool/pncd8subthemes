@@ -1,0 +1,28 @@
+//-- Links
+body {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $textColor;
+  background: $bodyBackground;
+}
+
+a, a:active, a:focus{     
+	outline: 0;
+	@include link-colors($aNormal,$aHover,$aActive,$aVisited,$aFocus);
+}
+.active, .active-trail {
+  font-weight: normal;
+}
+
+
+//-- Default comment out if not going to use it
+//*
+h1, h2, h3, h4, h5, h6 {
+  color:$h1Normal;
+  font-size:25px;
+  line-height:27px;
+  a {  @include link-colors($h1Normal,$h1Hover,$h1Active,$h1Visited,$h1Focus);}
+}
+//*/
+
